@@ -1,0 +1,15 @@
+Package: albertine
+Type: Package
+Title: Albertine Lowers Bias in Estimates through Reweighting due to Ignorable Non-Response Errors
+Version: 0.1.0
+Author: 
+  person("Martin", "Chevalier", role = c("aut", "cre"))
+  person("Arnaud", "Fizzala", role = c("aut"))
+  person("Thomas", "Deroyon", role = c("aut"))
+  person("Nicolas", "Paliod", role = c("aut"))
+  person("Insee", role = "cph")
+Maintainer: Martin Chevalier <martin.chevalier@insee.fr>
+Description: Albertine Lowers Bias in Estimates through Reweighting due to Ignorable Non-Response Errors
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
