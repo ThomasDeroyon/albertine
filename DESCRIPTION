@@ -9,7 +9,7 @@ Author:
   person("Nicolas", "Paliod", role = c("aut"))
   person("Insee", role = "cph")
 Maintainer: Martin Chevalier <martin.chevalier@insee.fr>
-Description: Albertine Lowers Bias in Estimates through Reweighting due to Ignorable Non-Response Errors
+Description: Albertine Lowers Bias in Estimates through Reweighting due to Ignorable Non-Response Errors.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
