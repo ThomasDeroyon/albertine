@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^doc$
 ^data-raw$
+^tar.gz$
