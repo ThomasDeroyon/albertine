@@ -1,4 +1,8 @@
 
+#' calcule_erreurs
+#'
+#' @param r vector containing values of the response dummy variable
+#' @param phat vector containing values of estimated response probability
 #' @export
 
 calcule_erreurs <- function(r, phat){
@@ -20,6 +24,10 @@ calcule_erreurs <- function(r, phat){
 
 }
 
+#' calcule_variances
+#' @param phat vector containing values of estimated response probability
+#' @param x vector containing values of the variable of interest
+#' @param p value of the global sample share used as a test sample
 #' @export
 
 calcule_variances <- function(phat, x, p){

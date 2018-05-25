@@ -136,7 +136,15 @@ select_hb <- function(y, phat, weight = rep(1, length(y)), K = 10, parameters, m
 }
 
 ################################# Fonction choose_best_hb #################################
-#'
+#' choose_best_hb
+#' @param y vector
+#' @param phat vector containing estimated response probabilities
+#' @param weight vector containing the weights associated to each observation
+#' @param u vector containing
+#' @param parameters v
+#' @param method v
+#' @param K pouet
+#' @param print_rhg pouetpouet
 #' @export
 
 
