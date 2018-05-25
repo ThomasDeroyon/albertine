@@ -5,6 +5,8 @@ Version: 0.1.0
 Imports:
   data.table, 
   stats
+Suggests:
+  testthat
 Author: 
   person("Martin", "Chevalier", role = c("aut", "cre"))
   person("Arnaud", "Fizzala", role = c("aut"))
