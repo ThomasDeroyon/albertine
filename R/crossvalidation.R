@@ -26,7 +26,7 @@ compute_error_rhg <- function(ly, lphat, lrhg, lweight, ty, tphat, method = 'mse
 
   temp_rhg <-
     temp[,list(phatmax_rhg = max(phat),
-               phat_rhg = weighted.mean(phat, weights = weight)),
+               phat_rhg = stats::weighted.mean(phat, weights = weight)),
          by = rhg]
 
   phathat <- affect_to_rhg(tphat, phatmax = temp_rhg$phatmax_rhg, phat = temp_rhg$phat_rhg)
@@ -150,17 +150,17 @@ choose_best_hb <- function(y, phat, weight = rep(1, length(y)), u, parameters,
                                   print_rhg = print_rhg)
 
   temp <-
-    data.table(rhg_q = hb(phat[u], parameter = optimal_parameters['q'], print_rhg = F)$q$rhg[[1]],
-               rhg_km = hb(phat[u], parameter = optimal_parameters['km'], print_rhg = F)$km$rhg[[1]],
+    data.table(rhg_q = hb(phat[u], parameters = optimal_parameters['q'], print_rhg = F)$q$rhg[[1]],
+               rhg_km = hb(phat[u], parameters = optimal_parameters['km'], print_rhg = F)$km$rhg[[1]],
                phat = phat[u],
                weight = weight[u])
 
   temp_rhg_q <-
-    temp[,list(phatmax_rhg = max(phat),phat_rhg = weighted.mean(phat, weights = weight)),
+    temp[,list(phatmax_rhg = max(phat),phat_rhg = stats::weighted.mean(phat, weights = weight)),
          by = rhg_q]
 
   temp_rhg_km <-
-    temp[,list(phatmax_rhg = max(phat),phat_rhg = weighted.mean(phat, weights = weight)),
+    temp[,list(phatmax_rhg = max(phat),phat_rhg = stats::weighted.mean(phat, weights = weight)),
          by = rhg_km]
 
   list(

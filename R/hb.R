@@ -1,5 +1,18 @@
 
 
+#' blabla
+#'
+#' @description blibli
+#'
+#' @param phat bloblo
+#' @param parameters bloblo
+#' @param leaf bloblo
+#' @param print_rhg bloblo
+#'
+#' @return bloblo
+#'
+#' @export
+#' @import data.table
 
 hb <- function(phat, parameters, leaf = 100, print_rhg = T){
 
@@ -22,7 +35,7 @@ hb <- function(phat, parameters, leaf = 100, print_rhg = T){
   while(((r2Q < param_max) & (minsizeQ >= leaf)) | ((r2KM < param_max) & (minsizeKM >= leaf)) ){
 
     groupsQ <-
-      cut(phat,unique(quantile(phat,seq(0,1,by=1/NbGRH))),labels=FALSE,include.lowest=TRUE,right=TRUE)
+      cut(phat,unique(stats::quantile(phat,seq(0,1,by=1/NbGRH))),labels=FALSE,include.lowest=TRUE,right=TRUE)
 
     t <- data.table(
       phat = phat,
