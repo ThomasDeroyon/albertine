@@ -136,6 +136,8 @@ select_hb <- function(y, phat, weight = rep(1, length(y)), K = 10, parameters, m
 }
 
 ################################# Fonction choose_best_hb #################################
+#'
+#' @export
 
 
 choose_best_hb <- function(y, phat, weight = rep(1, length(y)), u, parameters,
